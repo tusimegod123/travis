@@ -17,13 +17,13 @@ input[type=text], input[type=password]{
     margin-right: 43px;
  }
   #cancel{
-      background:#f44336;;
+      background:#f51403;;
       color: #ffffff;
       width: 100px;
       
   }
   #login{
-      background: green;
+      background: rgb(0, 151, 0);
       color: #ffffff;
       width: 100px;
       
