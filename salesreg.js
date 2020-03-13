@@ -38,20 +38,15 @@ function validate(a, b, c) {
     var pass = document.getElementById(b)
     var uname = document.getElementById(c)
     if (nin.value.length < 5 && nin.value.length < 13) {
-        alert('The NIN ids should be between 5 to 35 characters '),
+        alert('The NIN ids should be between 5 to 35 characters ')
         nin.style.border = '2px solid red'
-    }
-    else {
-        return true
     }
 
     if (pass.value.length == 0 || pass.value.length < min || pass.value.length < max) {
-        alert('Password should be between 6 to 12 characters'),
+        alert('Password should be between 6 to 12 characters')
         pass.style.border = '2px solid red'
 
 
-    } else {
-        return true
     }
 
     var letters = /^[A-Za-z]+$/;

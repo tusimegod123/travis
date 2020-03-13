@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./public/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="customer.css">
     <title>Customer</title>
 </head>
@@ -37,39 +37,41 @@
     </nav>
 
     <!--The Customers Details Form starts from here-->
-    <form name="sales" style="text-align: center;">
+    <form name="sales" style="text-align: center;" method="POST" action="/addcustomer">
         <h2 style="color:#4e4d4d; font-family: 'Times New Roman', Times, serif ;">Enter Customer's Details</h2>
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Full Name</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Full name" value=""
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Full name" name="fName"
                     required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault04">Current Date</label>
-                <input type="date" class="form-control" id="validationDefault04" placeholder="Date" required>
+                <input type="date" class="form-control" id="validationDefault04" placeholder="Date" name="currentDate"
+                    required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Nationality</label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Nationality" value=""
-                    required>
+                    name="nationality" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault03">Phone Number</label>
-                <input type="tel" class="form-control" id="validationDefault03" placeholder="Phone Number" required>
+                <input type="text" class="form-control" id="validationDefault03" placeholder="Phone Number"
+                    name="phoneNumber" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault05">NIN</label>
                 <input type="text" class="form-control" id="validationDefault05" placeholder="National ID Number"
-                    required>
+                    name="nin" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefaultUsername">Date of Birth</label>
                 <div class="input-group">
 
-                    <input type="date" class="form-control" id="validationDefaultUsername" placeholder="Date"
+                    <input type="date" class="form-control" id="validationDefaultUsername" placeholder="Date" name="dob"
                         aria-describedby="inputGroupPrepend2" required>
                 </div>
             </div>
@@ -77,25 +79,25 @@
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Kind of Vihecle</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Kind of Vihecle" value=""
-                    required>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Kind of Vihecle"
+                    name="kindOfVehicle" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Referees Name</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Name" value=""
-                    required>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Name"
+                    name="refreesName" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Referees Contact</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact" value=""
-                    required>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
+                    name="refNumber" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Referees Work</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact" value=""
-                    required>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
+                    name="refWork" required>
             </div>
 
             <div class="col-md-4 mb-3">
@@ -103,21 +105,22 @@
                 <div class="input-group">
 
                     <input type="date" class="form-control" id="validationDefaultUsername" placeholder="Date"
-                        aria-describedby="inputGroupPrepend2" required>
+                        aria-describedby="inputGroupPrepend2" name="refdob" required>
                 </div>
 
             </div>
 
             <div class="col-md-4 mb-3">
                 <label for="validationDefault04">Down Payment</label>
-                <input type="text" class="form-control" id="validationDefault04" placeholder="Down Payment" required>
+                <input type="text" class="form-control" id="validationDefault04" placeholder="Down Payment"
+                    name="downPayment" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault04">Marital Status</label>
-                <select class="custom-select">
+                <select class="custom-select" name="status">
                     <option selected>Choose</option>
                     <option value="Supervisor">Single</option>
                     <option value="Sales Representative">Married</option>
@@ -127,24 +130,24 @@
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Other Loans incase Any</label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Other Loans incase Any"
-                    value="" required>
+                    name="otherLoans" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Stage Name</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Stage name" value=""
-                    required>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Stage name"
+                    name="stageName" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">LC1</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="name of LC1" value=""
+                <input type="text" class="form-control" id="validationDefault01" placeholder="name of LC1" name="lc1"
                     required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">LC3</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Name of LC3" value=""
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Name of LC3" name="lc3"
                     required>
             </div>
         </div>
@@ -158,14 +161,13 @@
                 </label>
             </div>
         </div>
-        <button class="btn btn-primary" type="submit"
-            onclick="validate('validationDefault02','validationDefault02')">Submit Details</button>
+        <button class="btn btn-primary" type="submit">Submit Details</button>
 
         <button class="btn btn-primary" type="reset">Cancel</button>
     </form>
     </form>
 
-    <script src="customer.js"></script>
+    
 </body>
 
 </html>
