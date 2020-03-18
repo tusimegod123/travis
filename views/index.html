@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <title>Home</title>
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Boda Boda banja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"></li>
+                <a class="nav-link" href="/" style="color: #fff;">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addcustome" style="color: #fff;">Admin</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/addsaleRep" style="color: #fff;">Sales Representative</a>
+                </li>
+            </ul>
+
+            </form>
+        </div>
+    </nav>
+
+    <!---->
+    <h2
+        style="text-align: center;background-color: beige; font-family: 'Times New Roman', Times, serif; color:rgb(71, 128, 212);">
+        Welcome to Boda Banja Management System</h2>
+
+    <!--A container to hold the admin and sales rep login forms-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--Form for the Administrator-->
+            <div class="col-md-5 mb-3" style="background-color: rgb(71, 128, 212);color: white;">
+                <h2>INFORMATION</h2>
+                <p>
+                    Boda boda banja (BB-banja), is a private company that offers bodabodas, tuktuks, tricycles among
+                    others on credit to
+                    qualified
+                    Ugandans.
+
+                </p>
+
+                <p>
+                    A customer to be eligable to get aloan from us, must be in position to meet all the required
+                    information and registered by the sales Representative
+                    <p>
+                        <img src="images/Bajaj-Boxer-150.jpg" alt="" style="height: 210px; text-align: center;">
+                    </p>
+                </p>
+                <button style="border-radius: 3px;height: 35px;"> <a href="/login">Have an Account</a> </button>
+            </div>
+
+            <!--Form for the Sales Representative-->
+            <form method="POST" action="/login" style="margin-left: 25px;">
+                <h3 style="color:rgb(71, 128, 212);text-align: center;">REGISTER FORM</h3>
+                <div class="form-row">
+                    <div class="col-md-6 col-mb-3">
+                        <label class="exampleInputPassword1" for="Username">First name</label>
+                        <input type="text" class="form-control" placeholder="First name">
+                    </div>
+
+                    <div class="col">
+                        <label class="exampleInputPassword1" for="Username">Last name</label>
+                        <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-6 col-mb-6">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+
+                    <div class="col">
+                        <label class="exampleInputPassword1" for="Username">Username</label>
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                            placeholder="Username">
+                    </div>
+                </div><br>
+                <p><button class="btn btn-primary" type="submit" style="width: 100%;">Register</button></p>
+            </form>
+        </div>
+    </div>
+
+
+    <footer id="footer" style="color:rgb(71, 128, 212);">&copy2020 Bodadoa banja </footer>
+    </nav>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

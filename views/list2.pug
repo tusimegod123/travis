@@ -1,0 +1,33 @@
+Doctype
+html
+  head
+    title  List of users
+  body
+    table
+      thead
+        tr
+          th   Full Name
+          th   Password
+          th   Email
+          th   Supervisors
+          th   Number of Working days
+          th  Date of Birth
+          th   Contact
+          th  Current Date
+          th   NIN
+          th   Role
+          
+        tbody
+        each salesRep in sales
+          tr
+            td  #{salesRep.fName}
+            td  #{salesRep.currentDate}
+            td  #{salesRep.nationality}
+            td  #{salesRep.phoneNumber}
+            td  #{salesRep.nin} 
+            td  #{salesRep.dob} 
+            td  #{salesRep.kindOfVehicle} 
+            td  #{salesRep.refreesName}   
+            td  #{salesRep.refNumber}   
+            td  #{salesRep.refWork}   
+            

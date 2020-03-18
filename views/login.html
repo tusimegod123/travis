@@ -13,7 +13,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Boda Boda banja</a>
+        <a class="navbar-brand" href="/">Boda Boda banja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,14 +22,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"></li>
-                <a class="nav-link" href="index.html" style="color: #fff;">Home </a>
+                <a class="nav-link" href="/" style="color: #fff;">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin.html" style="color: #fff;">Admin</a>
+                    <a class="nav-link" href="/addcustome" style="color: #fff;">Admin</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="salesreg.html" style="color: #fff;">Sales Representative</a>
+                    <a class="nav-link" href="/addsaleRep" style="color: #fff;">Sales Representative</a>
                 </li>
             </ul>
 
@@ -48,7 +48,7 @@
 
             <!--Form for the Administrator-->
             <div class="col-md-6 col-sm-12">
-                <form action="" method="POST" class="form1">
+                <form action="/addSalesRep" method="POST" class="form1">
                     <h2><a href=""
                             style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #4e4d4d;">Login
                             As an Administrator</a></h2>
@@ -56,7 +56,7 @@
                     <input type="text" name="uname" placeholder="Enter User Name" required><br><br>
                     <input type="password" name="password" placeholder="Enter Password" required> <br><br>
                     <input type="checkbox">Remember me <br><br>
-                    <button type="button" name="submit" id="login">Login</button>
+                    <button type="submit" name="submit" id="login">Login</button>
                     <button type="reset" name="submit" id="cancel">Cancel</button><br><br>
                     <p>Forgot User name or Password? click <a href="#"> Here</a>To reset</p>
                 </form>
@@ -64,7 +64,7 @@
 
             <!--Form for the Sales Representative-->
             <div class="col-md-6 col-sm-12">
-                <form action="" method="POST" class="form1">
+                <form action="/addcustoma" method="POST" class="form1">
                     <h3><a href="#"
                             style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #4e4d4d;">Login
                             As a Sales Representative</a></h3>
@@ -73,7 +73,7 @@
                     <input type="text" name="uname" placeholder="Enter User Name" required><br><br>
                     <input type="password" name="password" placeholder="Enter Password" required> <br><br>
                     <input type="checkbox">Remember me <br><br>
-                    <button type="button" name="submit" id="login">Login</button>
+                    <button type="submit" name="submit" id="login">Login</button>
                     <button type="reset" name="submit" id="cancel">Cancel</button><br><br>
                     <p>Forgot User name or Password? click<a href="salesreg.html"> Here</a> to reset</p>
                 </form>
