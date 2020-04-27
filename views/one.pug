@@ -1,0 +1,103 @@
+Doctype
+html
+  link(rel="stylesheet" href="/css/bootstrap.css")
+  link(rel="stylesheet" href="/css/onePug.css")
+  link(rel="stylesheet" href="/css/salesreg.css")
+  script(src="/js/jquery-3.4.1.js")
+  script(src="js/bootstrap.js")
+
+  head
+    title  customer
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style='position: fixed;z-index: 1000; top: 0;width: 100%;')
+     a.navbar-brand(href='/') Boda Boda banja
+     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+     #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+       li.nav-item.active
+         a.nav-link(href='/' style='color: #fff;') Home 
+       li.nav-item
+         a.nav-link(href='/login' style='color: #fff;') Admin
+       li.nav-item
+         a.nav-link(href='/form2' style='color: #fff;') Sales Representative
+       li.nav-item
+         a.nav-link(href='/customerlist' style='color: #fff;') Customers 
+
+    h2#heading You are Viewing #{x.fullName}'s Profile 
+    br  
+    div.container  
+    table.table
+      thead.thead-dark
+        tr
+          th  1. Full Name
+          td  #{x.fullName}
+        tr
+          th   2. Current Date
+          td  #{x.currentDate}
+        tr  
+          th   3. Nationality
+          td  #{x.nationality}
+        tr   
+          th   4. Phone Number
+          td  #{x.contact}
+        tr  
+          th   5. NIN
+          td  #{x.nin}
+        tr  
+          th  6. Date of Birth
+          td  #{x.dob} 
+        tr  
+          th   7. Kind of Vihecle
+          td  #{x.kindOfVehicle} 
+        tr  
+          th  8. Referees Name
+          td  #{x.refreesName}
+        tr  
+          th   9.Referees Contact
+          td  #{x.refNumber}
+        tr   
+          th   10. Referees Work
+          td  #{x.refWork} 
+        tr  
+          th  11. Refrees Date of Birth
+          td  #{x.refdob}
+        tr  
+          th   12. Down Payment
+          td  #{x.downPayment} 
+        tr  
+          th   13. Marital Status
+          td  #{x.status}
+        tr  
+          th   14. Other Loans incase Any
+          td  #{x.otherLoans}
+        tr  
+          th   15. Stage Name
+          td  #{x.stageName} 
+        tr  
+          th   17. LC1
+          td  #{x.lc1}
+        tr 
+          th   19. LC3
+          td  #{x.lc3} 
+    form(action='/installment' method='POST')
+      .form-group.row
+        label.col-sm-2.col-form-label(for='inputEmail3' ) CustomerID
+        .col-sm-10
+         input#inputEmail3.form-control(type='text' name='customerID' value=`${x._id}`)
+      .form-group.row
+        label.col-sm-2.col-form-label(for='inputEmail3') Amount So Far paid
+        .col-sm-10
+         input#inputEmail3.form-control(type='text' value=`${x.downPayment}` name='downPayment')
+      .form-group.row
+        label.col-sm-2.col-form-label(for='inputEmail3') Balance
+        .col-sm-10
+         input#inputEmail3.form-control(type='text' value=`${y}`)
+      .form-group.row
+        label.col-sm-2.col-form-label(for='inputEmail3') Amount Paid Now
+        .col-sm-10
+         input#inputEmail3.form-control(type='text' value='' name='installmentAmount')      
+      .form-group.row
+       .col-sm-10
+        input.btn.btn-primary(type='submit' value='Pay Installment')  
+  footer#footer &copy2020 Bodadoa banja       

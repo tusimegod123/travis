@@ -12,7 +12,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="/">Boda Boda banja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +25,11 @@
                 <a class="nav-link" href="/" style="color: #fff;">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/addcustome" style="color: #fff;">Admin</a>
+                    <a class="nav-link" href="/login" style="color: #fff;">Admin</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/addsaleRep" style="color: #fff;">Sales Representative</a>
+                    <a class="nav-link" href="/addsales" style="color: #fff;">Sales Representative</a>
                 </li>
             </ul>
 
@@ -38,44 +38,61 @@
     </nav>
 
     <!---->
-    <h2
-        style="text-align: center;background-color: beige; font-family: 'Times New Roman', Times, serif; color: #4e4d4d;">
-        Welcome to Boda Banja Management System</h2>
+    <div class="form-row">
+        <div class="col-md-12">
+            <h2
+                style="text-align: center;background-color: beige; font-family: 'Times New Roman', Times, serif; color: rgb(71, 128, 212);">
+                Welcome to Boda Banja Management System</h2>
+        </div>
+    </div>
 
     <!--A container to hold the admin and sales rep login forms-->
-    <div class="container">
-        <div class="row">
-
+    <div class="container-fluid">
+        <div class="form-row">
+        <div class="col-md-6" style="background-color: rgb(71, 128, 212);color: white;">
+            <h2>INFORMATION</h2>
+            <p>
+                Boda boda banja (BB-banja), is a private company that offers bodabodas, tuktuks, tricycles among
+                others on credit to
+                qualified
+                Ugandans.
+        
+            </p>
+        
+            <p>
+                A customer to be eligable to get aloan from us, must be in position to meet all the required
+                information and registered by the sales Representative
+                <p>
+                    <img src="images/Bajaj-Boxer-150.jpg" alt="" style="height: 210px; text-align: center;">
+                </p>
+            </p>
+            <!-- <button style="border-radius: 3px;height: 35px;"> <a href="/login">Have an Admin Account?</a> </button> &nbsp;
+            &nbsp;
+            <button style="border-radius: 3px;height: 35px;"> <a href="/form2">Have a Sales Account?</a> </button> -->
+        </div>
+        <div class="col"></div>
             <!--Form for the Administrator-->
-            <div class="col-md-6 col-sm-12">
-                <form action="/addSalesRep" method="POST" class="form1">
+            <div class="col-md-5">
+                <form method="POST" action="/login" class="form1">
                     <h2><a href=""
-                            style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #4e4d4d;">Login
+                            style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #fff;">Login
                             As an Administrator</a></h2>
                     <img src="images/aadmin.png" alt="" style="border-radius: 50%;height: 70px;"><br><br>
-                    <input type="text" name="uname" placeholder="Enter User Name" required><br><br>
-                    <input type="password" name="password" placeholder="Enter Password" required> <br><br>
+                    <div class="col ">
+                        <input class="form-control" id="exampleInputPassword1" type="text" name="email"
+                            placeholder="Enter User Name" required><br><br>
+                    </div>
+                    <div class="col ">
+                        <input class="form-control" id="exampleInputPassword1" type="password" name="password"
+                            placeholder="Enter Password" required> <br><br>
+                    </div>
+                    <div class="col "></div>
                     <input type="checkbox">Remember me <br><br>
-                    <button type="submit" name="submit" id="login">Login</button>
-                    <button type="reset" name="submit" id="cancel">Cancel</button><br><br>
-                    <p>Forgot User name or Password? click <a href="#"> Here</a>To reset</p>
-                </form>
-            </div>
-
-            <!--Form for the Sales Representative-->
-            <div class="col-md-6 col-sm-12">
-                <form action="/addcustoma" method="POST" class="form1">
-                    <h3><a href="#"
-                            style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #4e4d4d;">Login
-                            As a Sales Representative</a></h3>
-
-                    <img src="images/user.jpg" style="border-radius: 50%;height: 68px;"><br><br>
-                    <input type="text" name="uname" placeholder="Enter User Name" required><br><br>
-                    <input type="password" name="password" placeholder="Enter Password" required> <br><br>
-                    <input type="checkbox">Remember me <br><br>
-                    <button type="submit" name="submit" id="login">Login</button>
-                    <button type="reset" name="submit" id="cancel">Cancel</button><br><br>
-                    <p>Forgot User name or Password? click<a href="salesreg.html"> Here</a> to reset</p>
+                    <input class="btn bg-success" type="submit" name="submit" id="login">
+                    <button class="btn bg-danger" type="reset" name="submit" id="cancel"
+                        onclick="reset()">Cancel</button>
+                    <br><br>
+                    <p>Forgot User name or Password? click <a href="/" style="color: blue;"> Here</a>To reset</p>
                 </form>
             </div>
         </div>
@@ -85,6 +102,7 @@
     <footer id="footer">&copy2020 Bodadoa banja </footer>
     </nav>
 
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 

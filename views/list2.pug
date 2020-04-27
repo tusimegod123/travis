@@ -1,12 +1,31 @@
 Doctype
 html
+  link(rel="stylesheet" href="/css/bootstrap.css")
+  link(rel="stylesheet" href="/css/list2.css")
+  link(rel="stylesheet" href="/css/salesreg.css")
+  script(src="/js/jquery-3.4.1.js")
+  script(src="js/bootstrap.js")
   head
     title  List of users
   body
-    table
-      thead
+   nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style='position: fixed;z-index: 1000; top: 0;width: 100%;')
+     a.navbar-brand(href='/') Boda Boda banja
+     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+     #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+       li.nav-item.active
+         a.nav-link(href='/' style='color: #fff;') Home 
+       li.nav-item
+         a.nav-link(href='/login' style='color: #fff;') Admin
+       li.nav-item
+         a.nav-link(href='/saleslist' style='color: #fff;') Sales Representative
+   div.container1   
+      table.table
+       thead.thead-dark
         tr
           th   Full Name
+          th   User Id
           th   Password
           th   Email
           th   Supervisors
@@ -14,20 +33,18 @@ html
           th  Date of Birth
           th   Contact
           th  Current Date
-          th   NIN
-          th   Role
-          
+          th   Role 
         tbody
-        each salesRep in sales
+        each sale in sales
           tr
-            td  #{salesRep.fName}
-            td  #{salesRep.currentDate}
-            td  #{salesRep.nationality}
-            td  #{salesRep.phoneNumber}
-            td  #{salesRep.nin} 
-            td  #{salesRep.dob} 
-            td  #{salesRep.kindOfVehicle} 
-            td  #{salesRep.refreesName}   
-            td  #{salesRep.refNumber}   
-            td  #{salesRep.refWork}   
-            
+            td  #{sale.fname}
+            td  #{sale.userid}
+            td  #{sale.password}
+            td  #{sale.email}
+            td  #{sale.supervisor}
+            td  #{sale.numberOfWorkingDays} 
+            td  #{sale.dateOfBirth} 
+            td  #{sale.contact} 
+            td  #{sale.currentDate}     
+            td  #{sale.role}   
+  footer#footer &copy2020 Bodadoa banja           

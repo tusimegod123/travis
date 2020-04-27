@@ -1,3 +1,16 @@
+body{
+color: rgb(71, 128, 212);
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .salesregform{
     background-color:beige;
 }
+#footer{
+      color: white;
+      text-align: center; 
+      background-color: rgb(71, 128, 212);
+      height: 35px;
+      margin: 3px;
+      padding: 5px auto;
+  }

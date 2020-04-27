@@ -1,46 +1,93 @@
 Doctype
 html
-  link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin="anonymous")
+  link(rel="stylesheet" href="/css/bootstrap.css")
+  link(rel="stylesheet" href="/css/onePug.css")
+  link(rel="stylesheet" href="/css/salesreg.css")
+  script(src="/js/jquery-3.4.1.js")
+  script(src="js/bootstrap.js")
   head
     title  List of users
   body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style='position: fixed;z-index: 1000; top: 0;width: 100%;')
+     a.navbar-brand(href='/') Boda Boda banja
+     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+     #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+       li.nav-item.active
+         a.nav-link(href='/' style='color: #fff;') Home 
+       li.nav-item
+         a.nav-link(href='/login' style='color: #fff;') Admin
+       li.nav-item
+         a.nav-link(href='/saleslist' style='color: #fff;') Sales Representative
+       li.nav-item
+         a.nav-link(href='/customer' style='color: #fff;') Customers
+    br
+    br
+    br     
+    h2 List of Registered Customers
+    form.form-group(action='/findcustomerr')
+     div.row
+      div.col-md-8
+       input.form-control(type='text' placeholder='Enetr The Full Name' name='fullName')
+      .col-sm-4
+        input.btn.btn-primary(type='submit' value='Search')  
+    div.container  
     table.table
-      thead
+      thead.thead-dark
+       each customer in customers
         tr
-          th   Full Name
-          th   Current Date
-          th   Nationality
-          th   Phone Number
-          th   NIN
-          th  Date of Birth
-          th   Kind of Vihecle
-          th  Referees Name
-          th   Referees Contact
-          th   Referees Work
-          th  Refrees Date of Birth
-          th   Down Payment
-          th   Marital Status
-          th   Other Loans incase Any
-          th   Stage Name
-          th   LC1
-          th   LC3
-        tbody
-        each customer in customers
-          tr
-            td  #{customer.fName}
-            td  #{customer.currentDate}
-            td  #{customer.nationality}
-            td  #{customer.phoneNumber}
-            td  #{customer.nin} 
-            td  #{customer.dob} 
-            td  #{customer.kindOfVehicle} 
-            td  #{customer.refreesName}   
-            td  #{customer.refNumber}   
-            td  #{customer.refWork}   
-            td  #{customer.refdob}   
-            td  #{customer.downPayment}  
-            td  #{customer.status}   
-            td  #{customer.otherLoans}  
-            td  #{customer.stageName} 
-            td  #{customer.lc1}   
-            td  #{customer.lc3}
+          th  1. Full Name
+          td  #{customer.fullName}
+          td
+           a(href=`/findcustomer/${customer._id}`) view
+        tr
+          th   2. Current Date
+          td  #{customer.currentDate}
+        tr  
+          th   3. Nationality
+          td  #{customer.nationality}
+        tr   
+          th   4. Phone Number
+          td  #{customer.contact}
+        tr  
+          th   5. NIN
+          td  #{customer.nin}
+        tr  
+          th  6. Date of Birth
+          td  #{customer.dob} 
+        tr  
+          th   7. Kind of Vihecle
+          td  #{customer.kindOfVehicle} 
+        tr  
+          th  8. Referees Name
+          td  #{customer.refreesName}
+        tr  
+          th   9.Referees Contact
+          td  #{customer.refNumber}
+        tr   
+          th   10. Referees Work
+          td  #{customer.refWork} 
+        tr  
+          th  11. Refrees Date of Birth
+          td  #{customer.refdob}
+        tr  
+          th   12. Down Payment
+          td  #{customer.downPayment} 
+        tr  
+          th   13. Marital Status
+          td  #{customer.status}
+        tr  
+          th   14. Other Loans incase Any
+          td  #{customer.otherLoans}
+        tr  
+          th   15. Stage Name
+          td  #{customer.stageName} 
+        tr  
+          th   17. LC1
+          td  #{customer.lc1}
+        tr 
+          th   19. LC3
+          td  #{customer.lc3} 
+    footer#footer &copy2020 Bodadoa banja        
+          
