@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/customer.css">
+    <title>Customer</title>
+</head>
+
+<body onload="document.customer.fullName.focus();">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"
+        style="position: fixed;z-index: 1000; top: 0;width: 100%;">
+        <a class="navbar-brand" href="/">BodaBoda-banja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"></li>
+                <a class="nav-link" href="/" style="color: #fff;">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" style="color: #fff;">Admin</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/saleslist" style="color: #fff;">View Sales Representatives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/customerlist" style="color: #fff;">View Customers</a>
+                </li>
+            </ul>
+
+            </form>
+        </div>
+    </nav>
+    <div>
+        <h2>Register Customer</h2>
+    </div>
+    <!--The Customers Details Form starts from here-->
+    <div class="container-fluid">
+    <form name="customer" id="form"  method="POST" action="/addcustomer">
+        <h2 style="color:rgb(71, 128, 212); font-family: 'Times New Roman', Times, serif ;">Enter Customer's Details</h2>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="Full Name">Full Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" name="fullName" placeholder="Full name" id="fullName" required>
+                <p id="p1" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault04">Current Date<strong style="color: red;">*</strong></label>
+                <input type="date" class="form-control" id="currentDate" placeholder="Date" name="currentDate" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Nationality<strong style="color: red;">*</strong></label>
+                <!-- <input type="text" class="form-control" id="nationality" placeholder="Nationality" name="nationality" required> -->
+                <select class="custom-select" name="nationality" id="nationality" required>
+                    <option selected>--</option>
+                    <option>UGANDAN</option>
+                    
+
+                </select>
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault03">Phone Number<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="contact" placeholder="Phone Number" name="contact" required>
+                <p id="p2" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault05">NIN<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="nin" placeholder="National ID Number" name="nin" required>
+                <p id="p3" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefaultUsername">Date of Birth<strong style="color: red;">*</strong></label>
+                <div class="input-group">
+
+                    <input type="date" class="form-control" id="validationDefaultUsername" placeholder="Date" name="dob"
+                        aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Kind of Vihecle<strong style="color: red;">*</strong></label>
+                <select class="custom-select" name="kindOfVehicle" id="kindOfVehicle" required>
+                    <option selected>Choose One</option>
+                    <option>Boda Boda</option>
+                    <option>Tuk Tuk</option>
+                    <option>Tricycles</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Referee's Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="refreesName" placeholder="Referees Name"
+                    name="refreesName" required>
+                    <p id="p5" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Referee's Contact<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
+                    name="refNumber" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Referee's Work<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
+                    name="refWork" required>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationDefaultUsername">Refrees Date of Birth<strong style="color: red;">*</strong></label>
+                <div class="input-group">
+
+                    <input type="date" class="form-control" id="validationDefaultUsername" placeholder="Date"
+                        aria-describedby="inputGroupPrepend2" name="refdob" required>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault04">Down Payment For<strong style="color: red;">*</strong></label>
+                <select class="custom-select" name="downPayment" id="downPayment" required>
+                
+                    <option></option>
+                    <option value="850000">Boda Boda</option>
+                    <option value="950000">Tuk Tuk</option>
+                    <option value="1000000">Tricycles</option>
+                </select>
+                <p id="p4" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault04">Marital Status <b style="color: red;">(Optional)</b></label>
+                <select class="custom-select" name="status">
+                    <option selected>Choose</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Other Loans (Incase Any)<strong style="color: red;">*</strong></label>
+                <!-- <input type="text" class="form-control" id="validationDefault01" placeholder="Other Loans incase Any"
+                    name="otherLoans" required> -->
+                    <select class="custom-select" name="otherLoans" id="otherLoans" required>
+                        <option selected>Select</option>
+                        <option>None</option>
+                        <option>Cash</option>
+                    </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Stage Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Stage name"
+                    name="stageName" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">LC1<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="lc1" placeholder="Name of LC1" name="lc1"
+                    required>
+                    <p id="p6" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">LC3<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="lc3" placeholder="Name of LC3" name="lc3"
+                    required>
+                    <p id="p7" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Stage Leader's Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="stageleader" placeholder="Name of Stage Leader" name="stageleader" required>
+                <p id="p8" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                    Confirm of required copies of documents.
+                </label>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit" onclick="validatingg('customer')">Submit Details</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" type="reset" value="reset"onclick="reset()">Cancel</button><br>
+        <p></p>
+    </form>
+    </div><br>
+    <footer id="footer" >&copy2020 Bodaboda banja </footer>
+
+
+    <script src="/js/customerreg.js"></script>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

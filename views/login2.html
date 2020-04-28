@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">BodaBoda-banja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"></li>
+                <a class="nav-link" href="/" style="color: #fff;">Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/customerlist" style="color: #fff;">View customerlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/saleslist" style="color: #fff;">View Saleslist</a>
+                </li>
+
+            </ul>
+
+            </form>
+        </div>
+    </nav>
+
+    <!---->
+    <div class="form-row">
+
+        <div class="col-md-12">
+            <h2
+                style="text-align: center;background-color: beige; font-family: 'Times New Roman', Times, serif; color: rgb(71, 128, 212);">
+                Welcome to Boda Banja Management System</h2>
+        </div>
+    </div>
+
+    <!--A container to hold the admin and sales rep login forms-->
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="col-md-6" style="background-color: rgb(71, 128, 212);color: white;">
+                <h2>NOTE FOR SALES REPRESENTATIVE</h2>
+                <p>
+                    Boda boda banja (BB-banja), is a private company that offers bodabodas, tuktuks, tricycles among
+                    others on credit to
+                    qualified
+                    Ugandans.
+
+                </p>
+
+                <p>
+                    A customer to be eligable to get aloan from us, must be in position to meet all the required
+                    information and registered by the sales Representative
+                    <p>
+                        <img src="images/Bajaj-Boxer-150.jpg" alt="" style="height: 210px; text-align: center;">
+                    </p>
+                </p>
+                <button style="border-radius: 3px;height: 35px;"> <a href="/saleslist">View Sales Representatives</a>
+                </button> &nbsp;
+                &nbsp;
+                <button style="border-radius: 3px;height: 35px;"> <a href="/customerlist">View Registered Customers</a>
+                </button>
+            </div>
+            <div class="col"></div>
+            <!--Form for the Sales Representative-->
+            <div class="col-md-5">
+                <form action="/addcustoma" method="POST" class="form1">
+                    <h3><a href="#"
+                            style="font-family: 'Times New Roman', Times, serif; color: #fff;">Login
+                            As a Sales Representative</a></h3>
+
+                    <img src="images/user.jpg" style="border-radius: 50%;height: 68px;"> <br><br>
+                    <div class="col">
+                        <input class="form-control" id="exampleInputPassword1" type="text" name="uname"
+                            placeholder="Enter User Name" required>
+                    </div><br>
+                    <div class="col">
+                        <input class="form-control" id="exampleInputPassword1" type="password" name="password"
+                            placeholder="Enter Password" required>
+                    </div><br>
+                    <input type="checkbox">Remember me <br><br>
+                    <button class="btn bg-success" type="submit" name="submit" id="login">Login</button>
+                    <button class="btn bg-danger" type="reset" name="submit" id="cancel">Cancel</button><br><br>
+                    <p>Forgot User name or Password? click<a href="/addsales" style="color: blue;"> Here</a> to reset
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div><br>
+    <div class="container-fluid">
+        <footer id="footer">&copy2020 Bodaboda banja </footer>
+    </div>
+
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
