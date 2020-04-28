@@ -10,7 +10,9 @@ var registerSchema = new mongoose.Schema({
     dateOfBirth: Date,
     contact: String,
     currentDate: Date,
-    role: String
+    role: String,
+    status: String,
+    gender:String
 
 });
 registerSchema.plugin(passportLocalMongoose, { usernameField: 'userid' })

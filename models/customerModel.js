@@ -1,7 +1,5 @@
 //Require mongoose dependency to include mongoose functionality
 const mongoose = require("mongoose");
-
-
 var nameSchema = new mongoose.Schema({
 
     fullName: String,
@@ -20,9 +18,9 @@ var nameSchema = new mongoose.Schema({
     otherLoans: String,
     stageName: String,
     lc1: String,
-    lc3: String
+    lc3: String,
+    stageleader:String
 
 });
-
 module.exports = mongoose.model("Customer", nameSchema);
 

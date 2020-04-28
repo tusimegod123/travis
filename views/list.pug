@@ -9,7 +9,7 @@ html
     title  List of users
   body
     nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style='position: fixed;z-index: 1000; top: 0;width: 100%;')
-     a.navbar-brand(href='/') Boda Boda banja
+     a.navbar-brand(href='/') BodaBoda-banja
      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
      #navbarSupportedContent.collapse.navbar-collapse
@@ -19,28 +19,32 @@ html
        li.nav-item
          a.nav-link(href='/login' style='color: #fff;') Admin
        li.nav-item
-         a.nav-link(href='/saleslist' style='color: #fff;') Sales Representative
+         a.nav-link(href='/saleslist' style='color: #fff;') View Sales Representatives
        li.nav-item
-         a.nav-link(href='/customer' style='color: #fff;') Customers
+         a.nav-link(href='/form2' style='color: #fff;') Logout
     br
     br
     br     
     h2 List of Registered Customers
     form.form-group(action='/findcustomerr')
      div.row
-      div.col-md-8
+      div.col-md-6
        input.form-control(type='text' placeholder='Enetr The Full Name' name='fullName')
-      .col-sm-4
+      .col-md-3
         input.btn.btn-primary(type='submit' value='Search')  
-    div.container  
-    table.table
+      .col-md-3
+       button.btn.btn-primary#addcustomer
+         a(href="/customer") Add New Customer  
+    div.container-fluid  
+     table.table
       thead.thead-dark
        each customer in customers
         tr
           th  1. Full Name
           td  #{customer.fullName}
           td
-           a(href=`/findcustomer/${customer._id}`) view
+            button.btn.btn-primary#addcustomer
+             a(href=`/findcustomer/${customer._id}`)  View customer Details
         tr
           th   2. Current Date
           td  #{customer.currentDate}
@@ -89,5 +93,8 @@ html
         tr 
           th   19. LC3
           td  #{customer.lc3} 
-    footer#footer &copy2020 Bodadoa banja        
+        tr 
+          th   20. Stage Leader's Name
+          td  #{customer.stageleader}  
+    footer#footer &copy2020 Bodaboda banja        
           

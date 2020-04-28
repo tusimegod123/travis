@@ -13,7 +13,7 @@
 <body onload="document.customer.fullName.focus();">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary"
         style="position: fixed;z-index: 1000; top: 0;width: 100%;">
-        <a class="navbar-brand" href="/">Boda Boda banja</a>
+        <a class="navbar-brand" href="/">BodaBoda-banja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,10 +29,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/saleslist" style="color: #fff;">Sales Representative</a>
+                    <a class="nav-link" href="/saleslist" style="color: #fff;">View Sales Representatives</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/customerlist" style="color: #fff;">Customers</a>
+                    <a class="nav-link" href="/customerlist" style="color: #fff;">View Customers</a>
                 </li>
             </ul>
 
@@ -43,7 +43,8 @@
         <h2>Register Customer</h2>
     </div>
     <!--The Customers Details Form starts from here-->
-    <form name="customer" style="text-align: center;" method="POST" action="/addcustomer">
+    <div class="container-fluid">
+    <form name="customer" id="form"  method="POST" action="/addcustomer">
         <h2 style="color:rgb(71, 128, 212); font-family: 'Times New Roman', Times, serif ;">Enter Customer's Details</h2>
         <div class="form-row">
             <div class="col-md-4 mb-3">
@@ -59,12 +60,9 @@
                 <label for="validationDefault01">Nationality<strong style="color: red;">*</strong></label>
                 <!-- <input type="text" class="form-control" id="nationality" placeholder="Nationality" name="nationality" required> -->
                 <select class="custom-select" name="nationality" id="nationality" required>
-                    <option></option>
+                    <option selected>--</option>
                     <option>UGANDAN</option>
-                    <option>KENYAN</option>
-                    <option>TANZANIAN</option>
-                    <option>RWANDASE</option>
-                    <option>BURUNDI</option>
+                    
 
                 </select>
 
@@ -94,26 +92,27 @@
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Kind of Vihecle<strong style="color: red;">*</strong></label>
                 <select class="custom-select" name="kindOfVehicle" id="kindOfVehicle" required>
-                    <option></option>
+                    <option selected>Choose One</option>
                     <option>Boda Boda</option>
                     <option>Tuk Tuk</option>
                     <option>Tricycles</option>
                 </select>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="validationDefault01">Referees Name<strong style="color: red;">*</strong></label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Name"
+                <label for="validationDefault01">Referee's Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="refreesName" placeholder="Referees Name"
                     name="refreesName" required>
+                    <p id="p5" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="validationDefault01">Referees Contact<strong style="color: red;">*</strong></label>
+                <label for="validationDefault01">Referee's Contact<strong style="color: red;">*</strong></label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
                     name="refNumber" required>
             </div>
         </div>
         <div class="form-row">
             <div class="col-md-4 mb-3">
-                <label for="validationDefault01">Referees Work<strong style="color: red;">*</strong></label>
+                <label for="validationDefault01">Referee's Work<strong style="color: red;">*</strong></label>
                 <input type="text" class="form-control" id="validationDefault01" placeholder="Referees Contact"
                     name="refWork" required>
             </div>
@@ -129,7 +128,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-                <label for="validationDefault04">Down Payment<strong style="color: red;">*</strong></label>
+                <label for="validationDefault04">Down Payment For<strong style="color: red;">*</strong></label>
                 <select class="custom-select" name="downPayment" id="downPayment" required>
                 
                     <option></option>
@@ -171,13 +170,20 @@
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">LC1<strong style="color: red;">*</strong></label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="name of LC1" name="lc1"
+                <input type="text" class="form-control" id="lc1" placeholder="Name of LC1" name="lc1"
                     required>
+                    <p id="p6" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01">LC3<strong style="color: red;">*</strong></label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Name of LC3" name="lc3"
+                <input type="text" class="form-control" id="lc3" placeholder="Name of LC3" name="lc3"
                     required>
+                    <p id="p7" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Stage Leader's Name<strong style="color: red;">*</strong></label>
+                <input type="text" class="form-control" id="stageleader" placeholder="Name of Stage Leader" name="stageleader" required>
+                <p id="p8" style="color: red;font-family: 'Times New Roman', Times, serif;"></p>
             </div>
         </div>
 
@@ -191,11 +197,12 @@
             </div>
         </div>
 
-        <button class="btn btn-primary" type="submit" onclick="validatingg('customer')">Submit Details</button>
-        <button class="btn btn-danger" type="reset" value="reset"onclick="reset()">Cancel</button>
-
+        <button class="btn btn-primary" type="submit" onclick="validatingg('customer')">Submit Details</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger" type="reset" value="reset"onclick="reset()">Cancel</button><br>
+        <p></p>
     </form>
-    <footer id="footer" >&copy2020 Bodadoa banja </footer>
+    </div><br>
+    <footer id="footer" >&copy2020 Bodaboda banja </footer>
 
 
     <script src="/js/customerreg.js"></script>
