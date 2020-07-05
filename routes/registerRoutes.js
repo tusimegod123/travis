@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 const express = require('express');
 const User = require('../models/adminModel')
 const Customer = require('../models/customerModel')
@@ -25,7 +26,7 @@ router.post("/register", async (req, res) => {
         })
     } catch (error) {
         res.status(400).send("unable to save to database");    
-    };
+    }
 });
 /*Creating a post route which captures customer details from the customer registration form
 and saves it to the database the redirects the user to the customerlist(a route which displays the 
@@ -34,12 +35,13 @@ router.post("/addcustomer", async (req, res) => {
     try {
         var myData = new Customer(req.body);
         await myData.save()
-            .then(item => {
+            // eslint-disable-next-line no-unused-vars
+            .then(_item => {
                 res.redirect('/customerlist')
             })
     } catch (error) {
         res.status(400).send("unable to save to database");
-    };
+    }
 });
 
 router.get('/customerlist', async (req, res) => {
@@ -68,7 +70,7 @@ router.post("/addsalesRep", async (req, res) => {
             
     } catch (error) {
         res.status(400).send("unable to save to database");
-    };
+    }
 });
 /* Creating a get route which picks data from the database of the registered sales representative
 and displays them using the list2.pug file otherwise an error message "unable to find items in the database"
@@ -101,6 +103,8 @@ router.get('/findcustomerr', async (req, res) => {
 router.get('/findcustomer/:id', async (req, res) => {
     try {
         let Total
+        // eslint-disable-next-line no-constant-condition
+        // eslint-disable-next-line no-cond-assign
         if (Total = 'Boda Boda') {
             Total = 5150160
         } else {
