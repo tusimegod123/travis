@@ -8,6 +8,7 @@ const loginRoutes = require('./routes/loginRoutes');
 const salesRoutes = require('./routes/salesRoutes');
 const passport = require('passport')
 const User = require('./models/adminModel')
+var PORT = process.env.PORT || 3004;
 //const Sales = require('./models/salesModel')
 // Creates an express server
 const server = express();
@@ -50,7 +51,7 @@ mongoose
   .catch((err) => console.log(err));
 //});
 
-server.listen(3004, () => {
+server.listen(PORT, () => {
     console.log('Listening on 3004');
 
 })
