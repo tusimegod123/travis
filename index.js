@@ -31,24 +31,24 @@ passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
 
-// mongoose.connect("mongodb://localhost:27017/BodaBoda-Banja", { useNewUrlParser: true, useUnifiedTopology: true },
-//     function (err) {
-//         if (err) throw err;
-//         console.log('Successfully connected');
+mongoose.connect("mongodb://localhost:27017/BodaBoda-Banja", { useNewUrlParser: true, useUnifiedTopology: true },
+    function (err) {
+        if (err) throw err;
+        console.log('Successfully connected');
 
-//     });
+    });
 
-const uri =
-  "mongodb+srv://godwin:KqFtm2srY22Xz5j@cluster0.moyuf.mongodb.net/BodaBoda-Banja?retryWrites=true&w=majority";
-mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("MongoDB Connected…");
-  })
-  .catch((err) => console.log(err));
+// const uri =
+//   "mongodb+srv://godwin:KqFtm2srY22Xz5j@cluster0.moyuf.mongodb.net/BodaBoda-Banja?retryWrites=true&w=majority";
+// mongoose
+//   .connect(uri, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => {
+//     console.log("MongoDB Connected…");
+//   })
+//   .catch((err) => console.log(err));
 //});
 
 server.listen(PORT, () => {
