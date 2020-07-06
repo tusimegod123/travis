@@ -12,10 +12,10 @@ var PORT = process.env.PORT || 3004;
 //const Sales = require('./models/salesModel')
 // Creates an express server
 const server = express();
-//Setting the Engine view which contains the pug file
+// Setting the Engine view which contains the pug file
 server.set('view engine', 'pug');
 
-server.use(express.static('public'));
+server.use(express.static("public"));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use('/', userRoutes)
